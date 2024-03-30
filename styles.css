@@ -1,0 +1,120 @@
+/* Color Scheme */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #e74c3c; /* Red */
+    --background-color: #f5f5f5; /* Light gray */
+    --text-color: #333; /* Dark gray */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container styles */
+  .container {
+    width: calc(100% - 40px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Heading styles */
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  /* Task card styles */
+  .task-card {
+    width: 90%;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .completed-task {
+    border: 2px solid #28c742;
+  }
+  
+  .incomplete-task {
+    border: 2px solid #e74c3c;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .task-card h2.mdl-card__title-text {
+    font-size: 24px;
+    color: var(--text-color);
+  }
+  
+  .task-card .mdl-card__supporting-text {
+    padding-top: 16px;
+    color: var(--text-color);
+  }
+  
+  .task-card .mdl-button {
+    margin-right: 8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-card .mdl-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .task-card.completed {
+    text-decoration: line-through;
+    color: #28c742;
+  }
+  
+  .task-card.red-border {
+    border: 2px solid var(--accent-color);
+  }
+  
+  /* Button styles */
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Priority colors */
+  .priority-high {
+    color: var(--accent-color);
+  }
+  
+  .priority-medium {
+    color: var(--primary-color);
+  }
+  
+  .priority-low {
+    color: var(--secondary-color);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .task-card {
+      width: 90%;
+      margin: 0 auto 20px;
+    }
+  }
+  
+  .task-card .row {
+    display: flex;
+  }
+
+  .task-card .mdl-card__actions {
+    border-top: none;
+  }
+  
+  .task-card .col {
+    flex: 1;
+    padding: 0 5px;
+  }
